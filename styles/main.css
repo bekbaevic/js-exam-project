@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.form{
+    width: 100%;
+    height: 30px;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form input,
+.form button {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #333;
+    color: #555;
+    font-size: 16px;
+}
+
+.form button{
+    width: 20%;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    
+}
+
+.box{
+    display: flex;
+    padding: 20px 20px 0 20px;
+    gap: 15px;
+    align-items: center;
+    border-radius: 10px;
+    height: 100%;
+    font-size: 12px;
+    flex-direction: column;
+    min-width: 300px;
+    
+}
+
+.items {
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    width: 100%;
+}
+
+.items::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.item{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.item.hidden {
+    display: none;
+}
+
+.item h2 {
+    font-size: 22px ;
+}
+
+.item p {
+    font-size: 14px;
+}
+
+.item .icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+
+.item .icons .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon i {
+    font-size: 28px;
+}
+
+.delete-item {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+.next-item {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    font-size: 24px;
+    color: green;
+    cursor: pointer;
+}
+
